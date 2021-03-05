@@ -1,0 +1,51 @@
+#menu{
+    width: 1435px; 
+    height: 140px; 
+    background-color: #55a44e; 
+    margin: 0px;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+    float: left;
+    margin-right: 400px;
+}
+
+#bege{
+    width: 540px;
+    height: 60px;
+    background-color: #ede9a3;
+    float: left;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+#tituloVerde{
+    font-family: Amaranth; 
+    font-size: 18px;
+    color: #55a44e;
+    float: left;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+#botaoVerde{
+    width: 120px;
+    height: 40px;
+    background-color:#55a44e;
+    float: left;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#cadastro{
+    color: #ede9a3;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bolder;
+}
