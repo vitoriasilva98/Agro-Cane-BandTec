@@ -1,10 +1,6 @@
-@font-face{
-    font-family: Amaranth;
-    src: url(https://github.com/vitoriasilva98/Agro-Cane-BandTec/blob/main/Sprint1/Algoritmo/Simulador/amaranth.regular.ttf);
-}
 
 #menu{
-    width: 1435px; 
+    width: 1425px; 
     height: 140px; 
     background-color: #55a44e; 
     margin: 0px;
@@ -48,9 +44,48 @@ img{
 }
 
 #cadastro{
+    font-family: Amaranth;
     color: #ede9a3;
     margin-top: 10px;
-    margin-left: 20px;
+    margin-left: 22px;
     font-size: 18px;
     font-weight: bolder;
 }
+
+#bodyBege{
+    width: 1425px; 
+    height: 600px; 
+    background-color:#ede9a3; 
+    margin: 0px;
+}
+
+#simulador{
+    font-family: Amaranth;
+    color: #55a44e;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 50px;
+    padding-left: 680px;
+}
+
+#rodapeVerde{
+    width: 1425px; 
+    height: 25px; 
+    background-color:#55a44e; 
+    margin: 0px;
+    margin-bottom: 0px;
+    color:#ede9a3;
+    font-size: 14px;
+    text-align: center;
+    font-family: Amaranth;
+}
+
+#bolinhaVerde{
+    width: 150px;
+    height: 150px;
+    background-color: #55a44e;
+    border-radius: 100px;
+    margin-top: 70px;
+    margin-left: 675px;
+}
+
