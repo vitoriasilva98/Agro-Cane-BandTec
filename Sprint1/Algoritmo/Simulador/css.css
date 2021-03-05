@@ -1,3 +1,8 @@
+@font-face{
+    font-family: Amaranth;
+    src: url(https://fonts.google.com/specimen/Amaranth?preview.text_type=custom#glyphs);
+}
+
 #menu{
     width: 1435px; 
     height: 140px; 
