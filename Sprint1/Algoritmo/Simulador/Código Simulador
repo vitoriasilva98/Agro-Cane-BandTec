@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro Agro Cane</title>
+    <link rel="shortcut icon" href="agro_logo.jpeg">
+</head>
+
+<body style="text-align: center;background-color: #ede9a3;">
+    <header>
+        <div style="background-color: #55a44e; height: 152px;width: 300px;width: 45%; float: right;"></div>
+
+        <div style="background-color: #55a44e; height: 152px;width: 300px;width: 45%; float: left;margin-right: 0px;">
+        </div>
+        <img style="height: 152px;margin-right: 0%;" src="agro_logo.jpeg" alt="Logo Agro Cane">
+    </header>
+    <h2>Nesta página iremos simular custo monetário, consumo de água, produção bruta de Cana-de-Açúcar e economia com e
+        sem aplicação:</h2>
+    <b>Insira o valor de Área em Hectares:</b>
+    <input style="border-radius: 10px;" id="hec" type="text" placeholder="Área em: Hectares"><br>
+
+    <br>
+    <b>Escolha a região de plantio:</b>
+    <button onclick="centro_oestebt()" style="border-radius: 10px; background-color: #55a44e;">Centro-Oeste</button>
+    <button onclick="nordestebt()" style="border-radius: 10px;background-color: #55a44e;">Nordeste</button>
+    <button onclick="sudestebt()" style="border-radius: 10px;background-color: #55a44e;">Sudeste</button>
+    <div id="textco"></div>
+    <div id="textnd"></div>
+    <div id="textsd"></div>
+</body>
+
+</html>
+
+<script>
+
+    function centro_oestebt() {
+        var hectareco = Number(hec.value);
+        var qnttonco = hectareco * 75;
+        var consco = Number(hec.value) * 11;
+        var custoco = (consco * 4.583).toFixed(2);
+        var conseconco = Number(hec.value) * 8.8;
+        var custodescco = (conseconco * 4.583).toFixed(2)
+        textco.innerHTML +=
+            `<br><b>Centro-Oeste:</b><br><br>
+    Você com ${hectareco} hectares terá uma produção bruta de ${qnttonco} toneladas de Cana.<br><br>
+Teria consumo de ${consco} M<sup>3</sup> de água e custo de R$${custoco} <br><br>
+Com economia de 20% da aplicação você teria:<br><br>
+Consumo de ${conseconco} M<sup>3</sup> de água e custo de R$${custodescco}<br><br>
+ `
+
+    }
+
+    function nordestebt() {
+        var hectarend = Number(hec.value);
+        var qnttonnd = hectarend * 75;
+        var consnd = Number(hec.value) * 17;
+        var custond = (consnd * 4.583).toFixed(2);
+        var conseconnd = Number(hec.value) * 13.6;
+        var custodescnd = (conseconnd * 4.583).toFixed(2)
+        textco.innerHTML +=
+            `<br><b>Nordeste:</b><br><br>
+    Você com ${hectarend} hectares terá uma produção bruta de ${qnttonnd} toneladas de Cana.<br><br>
+Teria consumo de ${consnd} M<sup>3</sup> de água e custo de R$${custond} <br><br>
+Com economia de 20% da aplicação você teria:<br><br>
+Consumo de ${conseconnd} M<sup>3</sup> de água e custo de R$${custodescnd}<br><br>
+ `
+
+    }
+
+   function sudestebt() {
+        var hectaresd   = Number(hec.value);
+        var qnttonsd = hectaresd * 75;
+        var conssd = Number(hec.value) * 5;
+        var custosd = (conssd * 4.583).toFixed(2);
+        var conseconsd = Number(hec.value) * 4;
+        var custodescsd = (conseconsd * 4.583).toFixed(2)
+        textco.innerHTML +=
+            `<br><b>Sudeste:</b><br><br>
+    Você com ${hectaresd} hectares terá uma produção bruta de ${qnttonsd} toneladas de Cana.<br><br>
+Teria consumo de ${conssd} M<sup>3</sup> de água e custo de R$${custosd} <br><br>
+Com economia de 20% da aplicação você teria:<br><br>
+Consumo de ${conseconsd} M<sup>3</sup> de água e custo de R$${custodescsd}<br><br>
+ `
+
+    }
+
+
+</script>
+
+
+<!--
+Pior dos casos
+133.3m2 = 1 tonelada = 20m3 agua
+1ha = 75 toneladas = 15000m3 agua
+
+Melhor dos casos
+133.3m2 = 1 tonelada = 2m3 agua
+1ha = 75 toneladas = 1500m3 agua
+
+Economia 20%
+2m3 – 20m3 por tonelada
+20m3 = R$166,66 cidade 
+20m3 = R$91,66 campo
+1m3 = R$4,583 campo
+
+Nordeste =  
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (17m3*X) de agua e custo de R$(17m3*R$4,583) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (13,6m3*X) de agua e custo de R$(13,6m3*R$4,583) 
+
+Centro-Oeste = 
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (11m3*X) de agua e custo de R$(11m3*R$4,583) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (8,8m3*X) de agua e custo de R$(8,8m3*R$4,583) 
+
+Sudeste = 
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (5m3*X) de agua e custo de R$(5m3*R$4,583) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (4m3*X) de agua e custo de R$(4m3*R$4,583)
+-->
