@@ -89,3 +89,100 @@ img{
     margin-left: 675px;
 }
 
+
+#menu{
+    width: 1425px; 
+    height: 140px; 
+    background-color: #55a44e; 
+    margin: 0px;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    margin-left: 100px;
+    float: left;
+    margin-right: 400px;
+}
+
+#bege{
+    width: 540px;
+    height: 60px;
+    background-color: #ede9a3;
+    float: left;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+#tituloVerde{
+    font-family: Amaranth; 
+    font-size: 18px;
+    color: #55a44e;
+    float: left;
+    margin-left: 25px;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+#botaoVerde{
+    width: 120px;
+    height: 40px;
+    background-color:#55a44e;
+    float: left;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#cadastro{
+    font-family: Amaranth;
+    color: #ede9a3;
+    margin-top: 10px;
+    margin-left: 22px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+#bodyBege{
+    width: 1425px; 
+    height: 600px; 
+    background-color:#ede9a3; 
+    margin: 0px;
+}
+
+#simulador{
+    font-family: Amaranth;
+    color: #55a44e;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-top: 50px;
+    padding-left: 672px;
+}
+
+#rodapeVerde{
+    width: 1425px; 
+    height: 25px; 
+    background-color:#55a44e; 
+    margin: 0px;
+    margin-bottom: 0px;
+    color:#ede9a3;
+    font-size: 14px;
+    text-align: center;
+    font-family: Amaranth;
+}
+
+#bolinhaVerde{
+    width: 150px;
+    height: 150px;
+    background-color: #55a44e;
+    border-radius: 100px;
+    margin-top: 70px;
+    margin-left: 645px;
+}
+
+#iconeCalculadora{
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
