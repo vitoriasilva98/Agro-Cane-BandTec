@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Banco de dados agro_cane
+
+tabela infos
+
+idInfos
+plantação - cana-de-açúcar
+Estado
+Cidade
+estação
+
+
+
+
+
+
+
+
+
+
+
+npm start - Inicializar o programa (Gráfico)
+ctrl + c - Parar o programa
+
+***Modo Raiz = Prompt 
+netstat -n -o -a  - listar os portais a serem usado
+
+taskkil /pid xxx(número do pid) = Finalizar a aplicação 
+
+***Modo Nutella = Gerenciador de tarefas
+
+netstat -n -o -a  - listar os portais a serem usado (Prompt)
+
+entrar no "Gerenciador de Tarefas" - Detalhes - Procurar o portal
