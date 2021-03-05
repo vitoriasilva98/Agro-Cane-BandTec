@@ -45,10 +45,10 @@
         var custodescco = (conseconco * 4.583).toFixed(2)
         textco.innerHTML +=
             `<br><b>Centro-Oeste:</b><br><br>
-    Você com ${hectareco} hectares terá uma produção bruta de ${qnttonco} toneladas de Cana.<br><br>
-Teria consumo de ${consco} M<sup>3</sup> de água e custo de R$${custoco} <br><br>
-Com economia de 20% da aplicação você teria:<br><br>
-Consumo de ${conseconco} M<sup>3</sup> de água e custo de R$${custodescco}<br><br>
+    Você com <b>${hectareco} hectares</b>  terá uma produção bruta de <b>${qnttonco} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${consco} M<sup>3</sup></b>  de água e custo de <b> R$${custoco}</b><br><br>
+Com economia de <b>20%</b> da aplicação você teria:<br><br>
+Consumo de <b>${conseconco} M<sup>3</sup></b> de água e custo de <b> R$${custodescco}</b><br><br>
  `
 
     }
@@ -62,10 +62,10 @@ Consumo de ${conseconco} M<sup>3</sup> de água e custo de R$${custodescco}<br><
         var custodescnd = (conseconnd * 4.583).toFixed(2)
         textco.innerHTML +=
             `<br><b>Nordeste:</b><br><br>
-    Você com ${hectarend} hectares terá uma produção bruta de ${qnttonnd} toneladas de Cana.<br><br>
-Teria consumo de ${consnd} M<sup>3</sup> de água e custo de R$${custond} <br><br>
-Com economia de 20% da aplicação você teria:<br><br>
-Consumo de ${conseconnd} M<sup>3</sup> de água e custo de R$${custodescnd}<br><br>
+    Você com <b>${hectarend} hectares</b> terá uma produção bruta de <b> ${qnttonnd} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${consnd} M<sup>3</sup></b> de água e custo de <b>R$${custond}</b>  <br><br>
+Com economia de <b>20%</b>  da aplicação você teria:<br><br>
+Consumo de <b>${conseconnd} M<sup>3</sup></b> de água e custo de <b> R$${custodescnd}</b><br><br>
  `
 
     }
@@ -79,10 +79,10 @@ Consumo de ${conseconnd} M<sup>3</sup> de água e custo de R$${custodescnd}<br><
         var custodescsd = (conseconsd * 4.583).toFixed(2)
         textco.innerHTML +=
             `<br><b>Sudeste:</b><br><br>
-    Você com ${hectaresd} hectares terá uma produção bruta de ${qnttonsd} toneladas de Cana.<br><br>
-Teria consumo de ${conssd} M<sup>3</sup> de água e custo de R$${custosd} <br><br>
-Com economia de 20% da aplicação você teria:<br><br>
-Consumo de ${conseconsd} M<sup>3</sup> de água e custo de R$${custodescsd}<br><br>
+    Você com <b>${hectaresd} hectares</b> terá uma produção bruta de <b> ${qnttonsd} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${conssd} M<sup>3</sup></b> de água e custo de <b> R$${custosd}</b>  <br><br>
+Com economia de <b>20%</b> da aplicação você teria:<br><br>
+Consumo de <b> ${conseconsd} M<sup>3</sup></b> de água e custo de <b> R$${custodescsd}</b><br><br>
  `
 
     }
