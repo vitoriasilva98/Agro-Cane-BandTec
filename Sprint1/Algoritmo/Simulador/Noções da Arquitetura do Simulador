@@ -1,0 +1,54 @@
+Valores calculados de acordo com as determinadas fontes de pesquisa, seguindo devidas proporções para posteriormente formular de maneira lógica os códigos do simulador financeiro. 
+Devido ao fato das regiões sul e norte não serem favoráveis para o plantio da cana-de-açúcar, as mesmas não foram integradas.
+Economia feita de forma conservadora baseando em apenas 20% na aplicação real essa economia pode aumentar consideravelmente. 
+Uma entrada de dados é o suficiente para esse simulador, com três botões, um para cada região. (Centro-Oeste, Nordeste, Sudeste)
+Valores monetários atribuídos com base na média de custo por região de água e a fator da zona rural.
+Menor área de plantio escolhida foi o hectare, então a mesma deve corresponder a unidade de área rural inserida pelo usuário.
+Pior dos casos baseia-se na região que terá maior consumo e custo consequentemente de água. E o melhor dos casos baseia-se na região que terá o menor custo e consumo de água. 
+Valores de consumo de água calculados pela média provável de consumo ao invés de um range máximo e mínimo por região referente ao consumo.
+
+
+
+
+Pior dos casos
+133.3m2 = 1 tonelada = 20m3 agua
+1ha = 75 toneladas = 15000m3 agua
+
+Melhor dos casos
+133.3m2 = 1 tonelada = 2m3 agua
+1ha = 75 toneladas = 1500m3 agua
+
+Economia 20%
+2m3 – 20m3 por tonelada
+20m3 = R$166,66 cidade 
+20m3 = R$91,66 campo
+1m3 = R$4,583 campo
+
+
+
+
+Nordeste =  
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (17m3*X) de agua e custo de R$(17m3*R$4,583) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (13,6m3*X) de agua e custo de R$(13,6m3*R$4,583) 
+
+Centro-Oeste = 
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (11m3*X) de agua e custo de R$(11m3*R$4,583) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (8,8m3*X) de agua e custo de R$(8,8m3*R$4,583) 
+
+Sudeste = 
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (5m3*X) de agua e custo de R$(5m3*R$4,583) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (4m3*X) de agua e custo de R$(4m3*R$4,583) 
+
+
+
+
+
