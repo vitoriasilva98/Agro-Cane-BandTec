@@ -39,9 +39,9 @@
     function centro_oestebt() {
         var hectareco = Number(hec.value);
         var qnttonco = hectareco * 75;
-        var consco = Number(hec.value) * 11;
+        var consco = Number(hec.value) * 18000000;
         var custoco = (consco * 4.583).toFixed(2);
-        var conseconco = Number(hec.value) * 8.8;
+        var conseconco = Number(hec.value) * 14400000;
         var custodescco = (conseconco * 4.583).toFixed(2)
         textco.innerHTML +=
             `<br><b>Centro-Oeste:</b><br><br>
@@ -56,9 +56,9 @@ Consumo de <b>${conseconco} M<sup>3</sup></b> de água e custo de <b> R$${custod
     function nordestebt() {
         var hectarend = Number(hec.value);
         var qnttonnd = hectarend * 75;
-        var consnd = Number(hec.value) * 17;
+        var consnd = Number(hec.value) * 23000000;
         var custond = (consnd * 4.583).toFixed(2);
-        var conseconnd = Number(hec.value) * 13.6;
+        var conseconnd = Number(hec.value) * 18400000;
         var custodescnd = (conseconnd * 4.583).toFixed(2)
         textco.innerHTML +=
             `<br><b>Nordeste:</b><br><br>
@@ -73,9 +73,9 @@ Consumo de <b>${conseconnd} M<sup>3</sup></b> de água e custo de <b> R$${custod
    function sudestebt() {
         var hectaresd   = Number(hec.value);
         var qnttonsd = hectaresd * 75;
-        var conssd = Number(hec.value) * 5;
+        var conssd = Number(hec.value) * 16000000;
         var custosd = (conssd * 4.583).toFixed(2);
-        var conseconsd = Number(hec.value) * 4;
+        var conseconsd = Number(hec.value) * 12800000;
         var custodescsd = (conseconsd * 4.583).toFixed(2)
         textco.innerHTML +=
             `<br><b>Sudeste:</b><br><br>
@@ -93,12 +93,10 @@ Consumo de <b> ${conseconsd} M<sup>3</sup></b> de água e custo de <b> R$${custo
 
 <!--
 Pior dos casos
-133.3m2 = 1 tonelada = 20m3 agua
-1ha = 75 toneladas = 15000m3 agua
+1ha = 75 toneladas = 2500mm agua
 
 Melhor dos casos
-133.3m2 = 1 tonelada = 2m3 agua
-1ha = 75 toneladas = 1500m3 agua
+1ha = 75 toneladas = 1500mm agua
 
 Economia 20%
 2m3 – 20m3 por tonelada
