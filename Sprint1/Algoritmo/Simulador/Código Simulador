@@ -17,8 +17,9 @@
         </div>
         <img style="height: 152px;margin-right: 0%;" src="agro_logo.jpeg" alt="Logo Agro Cane">
     </header>
-    <h2>Nesta página iremos simular custo monetário, consumo de água, produção bruta de Cana-de-Açúcar e economia com e
-        sem aplicação:</h2>
+    <h2>Nesta página iremos simular custo monetário, consumo de água, produção bruta de Cana-de-Açúcar e economia com
+        aplicação e valor sem nossa
+        aplicação:</h2>
     <b>Insira o valor de Área em Hectares:</b>
     <input style="border-radius: 10px;" id="hec" type="text" placeholder="Área em: Hectares"><br>
 
@@ -37,53 +38,77 @@
 <script>
 
     function centro_oestebt() {
-        var hectareco = Number(hec.value);
-        var qnttonco = hectareco * 75;
-        var consco = Number(hec.value) * 18000000;
-        var custoco = (consco * 4.583).toFixed(2);
-        var conseconco = Number(hec.value) * 14400000;
-        var custodescco = (conseconco * 4.583).toFixed(2)
+        var qntton = Number(hec.value * 75);
+        var cons = Number(hec.value) * 18000000;
+        var custo = (cons * 4.583).toFixed(2);
+        var consecon = Number((hec.value) * 14400000).toFixed(2);
+        var custodesc = (consecon * 4.583).toFixed(2);
+        var dife = (custo - custodesc).toFixed(2);
+        var pvermelho = (custodesc / custo) * 100;
+        var pverde = 100 - pvermelho
+
         textco.innerHTML +=
             `<br><b>Centro-Oeste:</b><br><br>
-    Você com <b>${hectareco} hectares</b>  terá uma produção bruta de <b>${qnttonco} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${consco} M<sup>3</sup></b>  de água e custo de <b> R$${custoco}</b><br><br>
+    Você com <b>${hec.value} hectares</b>  terá uma produção bruta de <b>${qntton} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${cons} M<sup>3</sup></b>  de água e custo de <b> R$${custo}</b><br><br>
 Com economia de <b>20%</b> da aplicação você teria:<br><br>
-Consumo de <b>${conseconco} M<sup>3</sup></b> de água e custo de <b> R$${custodescco}</b><br><br>
+Consumo de <b>${consecon} M<sup>3</sup></b> de água e custo de <b> R$${custodesc}</b><br><br>
+Você terá uma economia de <b>R$${dife}</b><br><br>
+
  `
+        textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
+                  <div style="width: ${pverde}%;height:100px;background-color: red;"></div></div>`
+        textco.innerHTML += `${pvermelho}%`
 
     }
 
     function nordestebt() {
-        var hectarend = Number(hec.value);
-        var qnttonnd = hectarend * 75;
-        var consnd = Number(hec.value) * 23000000;
-        var custond = (consnd * 4.583).toFixed(2);
-        var conseconnd = Number(hec.value) * 18400000;
-        var custodescnd = (conseconnd * 4.583).toFixed(2)
+        var hectare = Number(hec.value);
+        var qntton = (hectare * 75);
+        var cons = Number((hec.value) * 23000000).toFixed(2);
+        var custo = (cons * 4.583).toFixed(2);
+        var consecon = Number((hec.value) * 18400000).toFixed(2);
+        var custodesc = (consecon * 4.583).toFixed(2);
+        var dife = (custo - custodesc).toFixed(2);
+        var pvermelho = (custodesc / custo) * 100;
+        var pverde = 100 - pvermelho
+
         textco.innerHTML +=
             `<br><b>Nordeste:</b><br><br>
-    Você com <b>${hectarend} hectares</b> terá uma produção bruta de <b> ${qnttonnd} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${consnd} M<sup>3</sup></b> de água e custo de <b>R$${custond}</b>  <br><br>
+    Você com <b>${hectare} hectares</b> terá uma produção bruta de <b> ${qntton} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${cons} M<sup>3</sup></b> de água e custo de <b>R$${custo}</b>  <br><br>
 Com economia de <b>20%</b>  da aplicação você teria:<br><br>
-Consumo de <b>${conseconnd} M<sup>3</sup></b> de água e custo de <b> R$${custodescnd}</b><br><br>
- `
+Consumo de <b>${consecon} M<sup>3</sup></b> de água e custo de <b> R$${custodesc}</b><br><br>
+Você terá uma economia de <b>R$${dife}</b><br><br>`
+        textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
+                  <div style="width: ${pverde}%;height:100px;background-color: red;"></div></div>`
+        textco.innerHTML += `${pvermelho}%`
+
+
 
     }
 
-   function sudestebt() {
-        var hectaresd   = Number(hec.value);
-        var qnttonsd = hectaresd * 75;
-        var conssd = Number(hec.value) * 16000000;
-        var custosd = (conssd * 4.583).toFixed(2);
-        var conseconsd = Number(hec.value) * 12800000;
-        var custodescsd = (conseconsd * 4.583).toFixed(2)
+    function sudestebt() {
+        var hectare = Number(hec.value);
+        var qntton = (hectare * 75);
+        var cons = Number(hec.value) * 16000000;
+        var custo = (cons * 4.583).toFixed(2);
+        var consecon = (Number(hec.value) * 12800000);
+        var custodesc = (consecon * 4.583).toFixed(2);
+        var dife = (custo - custodesc).toFixed(2);
+        var pvermelho = (custodesc / custo) * 100;
+        var pverde = 100 - pvermelho
+
         textco.innerHTML +=
             `<br><b>Sudeste:</b><br><br>
-    Você com <b>${hectaresd} hectares</b> terá uma produção bruta de <b> ${qnttonsd} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${conssd} M<sup>3</sup></b> de água e custo de <b> R$${custosd}</b>  <br><br>
+    Você com <b>${hectare} hectares</b> terá uma produção bruta de <b> ${qntton} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${cons} M<sup>3</sup></b> de água e custo de <b> R$${custo}</b>  <br><br>
 Com economia de <b>20%</b> da aplicação você teria:<br><br>
-Consumo de <b> ${conseconsd} M<sup>3</sup></b> de água e custo de <b> R$${custodescsd}</b><br><br>
- `
+Consumo de <b> ${consecon} M<sup>3</sup></b> de água e custo de <b> R$${custodesc}</b><br><br>
+Você terá uma economia de <b>R$${dife}</b><br><br>`
+        textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
+                  <div style="width: ${pverde}%;height:100px;background-color: red;"></div></div>`
+        textco.innerHTML += `${pvermelho}%`
 
     }
 
@@ -95,8 +120,10 @@ Consumo de <b> ${conseconsd} M<sup>3</sup></b> de água e custo de <b> R$${custo
 Pior dos casos
 1ha = 75 toneladas = 2500mm agua
 
+
 Melhor dos casos
 1ha = 75 toneladas = 1500mm agua
+
 
 Economia 20%
 2m3 – 20m3 por tonelada
