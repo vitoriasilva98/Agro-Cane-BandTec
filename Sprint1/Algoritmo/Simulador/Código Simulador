@@ -39,9 +39,9 @@
 
     function centro_oestebt() {
         var qntton = Number(hec.value * 75);
-        var cons = Number(hec.value) * 18000000;
+        var cons = Number(hec.value) * 18;
         var custo = (cons * 4.583).toFixed(2);
-        var consecon = Number((hec.value) * 14400000).toFixed(2);
+        var consecon = Number((hec.value) * 14.4).toFixed(2);
         var custodesc = (consecon * 4.583).toFixed(2);
         var dife = (custo - custodesc).toFixed(2);
         var pvermelho = (custodesc / custo) * 100;
@@ -50,9 +50,9 @@
         textco.innerHTML +=
             `<br><b>Centro-Oeste:</b><br><br>
     Você com <b>${hec.value} hectares</b>  terá uma produção bruta de <b>${qntton} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${cons} M<sup>3</sup></b>  de água e custo de <b> R$${custo}</b><br><br>
+Teria consumo de <b> ${cons} Gl</b>  de água e custo de <b> R$${custo}</b><br><br>
 Com economia de <b>20%</b> da aplicação você teria:<br><br>
-Consumo de <b>${consecon} M<sup>3</sup></b> de água e custo de <b> R$${custodesc}</b><br><br>
+Consumo de <b>${consecon} Gl</b> de água e custo de <b> R$${custodesc}</b><br><br>
 Você terá uma economia de <b>R$${dife}</b><br><br>
 
  `
@@ -65,9 +65,9 @@ Você terá uma economia de <b>R$${dife}</b><br><br>
     function nordestebt() {
         var hectare = Number(hec.value);
         var qntton = (hectare * 75);
-        var cons = Number((hec.value) * 23000000).toFixed(2);
+        var cons = Number((hec.value) * 23).toFixed(2);
         var custo = (cons * 4.583).toFixed(2);
-        var consecon = Number((hec.value) * 18400000).toFixed(2);
+        var consecon = Number((hec.value) * 18.4).toFixed(2);
         var custodesc = (consecon * 4.583).toFixed(2);
         var dife = (custo - custodesc).toFixed(2);
         var pvermelho = (custodesc / custo) * 100;
@@ -76,9 +76,9 @@ Você terá uma economia de <b>R$${dife}</b><br><br>
         textco.innerHTML +=
             `<br><b>Nordeste:</b><br><br>
     Você com <b>${hectare} hectares</b> terá uma produção bruta de <b> ${qntton} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${cons} M<sup>3</sup></b> de água e custo de <b>R$${custo}</b>  <br><br>
+Teria consumo de <b> ${cons} Gl</b> de água e custo de <b>R$${custo}</b>  <br><br>
 Com economia de <b>20%</b>  da aplicação você teria:<br><br>
-Consumo de <b>${consecon} M<sup>3</sup></b> de água e custo de <b> R$${custodesc}</b><br><br>
+Consumo de <b>${consecon} Gl</b> de água e custo de <b> R$${custodesc}</b><br><br>
 Você terá uma economia de <b>R$${dife}</b><br><br>`
         textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
                   <div style="width: ${pverde}%;height:100px;background-color: red;"></div></div>`
@@ -91,9 +91,9 @@ Você terá uma economia de <b>R$${dife}</b><br><br>`
     function sudestebt() {
         var hectare = Number(hec.value);
         var qntton = (hectare * 75);
-        var cons = Number(hec.value) * 16000000;
+        var cons = Number(hec.value) * 16;
         var custo = (cons * 4.583).toFixed(2);
-        var consecon = (Number(hec.value) * 12800000);
+        var consecon = (Number(hec.value) * 12.8);
         var custodesc = (consecon * 4.583).toFixed(2);
         var dife = (custo - custodesc).toFixed(2);
         var pvermelho = (custodesc / custo) * 100;
@@ -102,9 +102,9 @@ Você terá uma economia de <b>R$${dife}</b><br><br>`
         textco.innerHTML +=
             `<br><b>Sudeste:</b><br><br>
     Você com <b>${hectare} hectares</b> terá uma produção bruta de <b> ${qntton} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${cons} M<sup>3</sup></b> de água e custo de <b> R$${custo}</b>  <br><br>
+Teria consumo de <b> ${cons} Gl</b> de água e custo de <b> R$${custo}</b>  <br><br>
 Com economia de <b>20%</b> da aplicação você teria:<br><br>
-Consumo de <b> ${consecon} M<sup>3</sup></b> de água e custo de <b> R$${custodesc}</b><br><br>
+Consumo de <b> ${consecon} Gl</b> de água e custo de <b> R$${custodesc}</b><br><br>
 Você terá uma economia de <b>R$${dife}</b><br><br>`
         textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
                   <div style="width: ${pverde}%;height:100px;background-color: red;"></div></div>`
