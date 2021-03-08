@@ -14,7 +14,173 @@
     <title>Simulador Agro Cane</title>
 
 </head>
+<style>
+    
+#menu{
+    width: 1425px; height: 140px; background-color: #55a44e; margin: 0px;
+}
 
+img{
+    width: 150px;height: 150px; margin-left: 100px; float: left; margin-right: 400px;
+}
+
+#bege{
+    width: 540px; height: 60px; background-color: #ede9a3; float: left; border-radius: 50px; margin-top: 40px; margin-left: 120px;
+}
+
+#tituloVerde{
+    font-family: Amaranth; font-size: 18px; color: #55a44e; float: left; margin-left: 25px; margin-top: 20px; font-weight: bolder;
+}
+
+#botaoVerde{
+    width: 120px; height: 40px; background-color:#55a44e; float: left; border-radius: 50px; margin-top: 10px; margin-left: 15px;
+}
+
+#cadastro{
+    font-family: Amaranth; color: #ede9a3; margin-top: 10px; margin-left: 22px; font-size: 18px; font-weight: bolder;
+}
+
+#bodyBege{
+    width: 1425px; height: 600px; background-color:#ede9a3; margin: 0px;
+}
+
+#simulador{
+    font-family: Amaranth; color: #55a44e; font-size: 20px; font-weight: bolder; padding-top: 50px; padding-left: 680px;
+}
+
+#bolinhaVerde{
+    width: 150px; height: 150px; background-color: #55a44e; border-radius: 100px; margin-top: 70px; margin-left: 675px;
+}
+
+
+#menu{
+    width: 1518px; height: 140px; background-color: #55a44e; margin: 0px;
+}
+
+img{
+    width: 150px; height: 150px; margin-left: 100px; float: left; margin-right: 400px;
+}
+
+#bege{
+    width: 540px; height: 60px; background-color: #ede9a3; float: left; border-radius: 50px; margin-top: 40px;
+}
+
+#tituloVerde{
+    font-family: Amaranth; font-size: 18px; color: #55a44e; float: left; margin-left: 25px; margin-top: 20px; font-weight: bolder;
+}
+
+#botaoVerde{
+    width: 120px; height: 40px; background-color:#55a44e; float: left; border-radius: 50px; margin-top: 10px; margin-left: 15px;
+}
+
+#cadastro{
+    font-family: Amaranth; color: #ede9a3; margin-top: 10px; margin-left: 22px; font-size: 18px; font-weight: bolder;
+}
+
+#bodyBege{
+    width: 1518px; height: 3200px; background-color:#ede9a3; margin: 0px;
+}
+
+#simulador{
+    font-family: Amaranth; color: #55a44e; font-size: 20px; font-weight: bolder; padding-top: 50px; padding-left: 730px;
+}
+
+#rodapeVerde{
+    width: 1425px; height: 25px; background-color:#55a44e; margin: 0px; margin-bottom: 0px; color:#ede9a3; font-size: 14px; text-align: center; font-family: Amaranth;
+}
+
+#bolinhaVerde{
+    width: 150px; height: 150px; background-color: #55a44e; border-radius: 100px; margin-top: 70px; margin-left: 700px; margin-bottom: 60px;
+}
+
+#iconeCalculadora{
+    width: 100px; height: 100px; margin-top: 25px; margin-left: 25px;
+}
+/*--------Simualdor-----------------------------------------------------------------------------*/
+#name{
+    color:#55a44e; font-size: 17px; text-align: center; font-family: Amaranth; margin-top: 20px; font-weight: bolder;
+}
+
+#pergunta{
+    color:black; font-size: 20px; text-align: center; font-family: Amaranth; margin-top: 10px; margin-left: 35px;
+}
+
+#nome{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  
+}
+
+#cidade{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  margin-bottom: 30px;
+}
+
+#estado{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  margin-bottom: 10px;
+}
+
+#hectare{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 180px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; margin-right: 10px; margin-left: 560px; float: left; font-weight: bolder;
+}
+
+#conversao{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 180px; height: 34px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; margin-right: 10px; float: left;
+    
+}
+
+#conversor{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 90px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; float: left;
+}
+
+#metro{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; margin-top: 20px; text-align: center;  font-weight: bolder; margin-left: 20px;
+}
+
+#conversaoHec{
+    color:black; font-size: 15px; text-align: center; font-family: Amaranth; margin-top: 30px; font-weight: bolder; margin-left: 50px;
+}
+
+#litro{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; 
+}
+
+#qtdDeIrrigacao{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; margin-left: 40px;
+}
+
+#simularsem{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 90px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; float: left; margin-top: 30px; margin-left: 735px; margin-bottom: 70px;
+}
+/*--------conexao---------------------------------------------------------------------------*/
+#conexao{
+    margin-top: 100px; font-family: Amaranth; font-size: 17px; font-weight: bolder; text-align: center; margin-left: 50px;
+}
+
+#botoesEstacao{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 90px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; float: left; margin-left: 10px;
+}
+
+#botaoestacoes{
+    margin-left: 575px; margin-top: 50px;
+}
+/*--------Resultado das estações----------------------------------------------------------------------------------*/
+
+#estacoesResultado{
+    color: black; font-family: Amaranth; font-size: 17px; text-align: center; margin-left: 50px;
+}
+
+#bolinhaVerdeEstacao{
+    width: 150px; height: 150px; background-color: #55a44e; border-radius: 100px; margin-top: 150px; margin-left: 700px; margin-bottom: 20px;
+}
+
+#iconesEstacoes{
+    width: 100px; height: 100px; margin-top: 25px; margin-left: 25px;
+}
+
+/*-----------------rodapé-------------------------------------------------------------*/
+#rodapeVerde{
+    width: 1518px; height: 25px; background-color:#55a44e; margin: 0px; margin-bottom: 0px; color:#ede9a3; font-size: 14px; text-align: center; font-family: Amaranth;
+}
+
+</style>
 <body style="margin-top: 0px; margin-left: 0px;">
     <div id="menu">
         <img
