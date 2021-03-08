@@ -303,9 +303,9 @@ img{
 
 
         //Calculo de gasto
-        conexao.innerHTML += `<div id="resultadoSem">O tamanho da sua plantação é de <b>${metr}</b>m² </div>`;
+        conexao.innerHTML += `<div id="resultadoSem">O tamanho da sua plantação é de <b style="color: green;">${metr}</b>m² </div>`;
         conexao.innerHTML += `<div id="resultadoSem"> e a quantidade de água necessária para irrigar toda </div>`;
-        conexao.innerHTML += `<div id="resultadoSem"> a plantação é(são) de <b>${litr}</b> litros, para irrigar </div>`;
+        conexao.innerHTML += `<div id="resultadoSem"> a plantação é(são) de <b style="color: green;">${litr}</b> litros, para irrigar </div>`;
         conexao.innerHTML += `<div id="resultadoSem"> o metro² é(são) necessário(s) <b style="color: red;">${qtdAguaPlantio}</b> litro(s), </div>`;
         conexao.innerHTML += `<div id="resultadoSem"> gerando um gasto de <b style="color: red;">R$ ${gastoAgua},00</b> de água.</div>`;
         conexao.innerHTML += `<div id="resultadoSem">Por mês o gasto total de água será de <b style="color: red;">R$ ${gastoTotalAgua},00</b>.</div><br>`;
@@ -326,8 +326,8 @@ img{
 
         var verao = litr * 0.45;
         var umIrrigacaoVerao = verao * 2;
-        var mesirrigacaoVerao = verao * qtdIrrig;
-        // O verão equivale a 80% de chuva(água) da irrigação necessária para a plantação.
+        var mesirrigacaoVerao = umIrrigacaoVerao * qtdIrrig;
+        // O verão equivale a 45% de chuva(água) da irrigação necessária para a plantação.
         AgroCane.innerHTML += `<div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/verao.png"></div>
         <div id="estacoesResultado">
         Se sua plantação ocorrer no verão de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é bem alta.<br>
@@ -350,7 +350,7 @@ img{
         var outono = litr * 0.18;
         var umIrrigacaoOutono = outono * 2;
         var mesirrigacaoOutono = umIrrigacaoOutono * qtdIrrig;
-        // O outono equivale a 50% de chuva(água) da irrigação necessária para a plantação.
+        // O outono equivale a 18% de chuva(água) da irrigação necessária para a plantação.
         AgroCane.innerHTML += `<div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/outono.png"></div>
         <div id="estacoesResultado">
         Se sua plantação ocorrer no outono de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é médio e o tempo é bem seco.<br>
@@ -372,8 +372,8 @@ img{
 
         var inverno = litr * 0.12;
         var umIrrigacaoInverno = inverno * 2;
-        var mesirrigacaoInverno = inverno * qtdIrrig;
-        // O inverno equivale a 40% de chuva(água) da irrigação necessária para a plantação.
+        var mesirrigacaoInverno = umIrrigacaoInverno * qtdIrrig;
+        // O inverno equivale a 12% de chuva(água) da irrigação necessária para a plantação.
         AgroCane.innerHTML += `<div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/inverno%20(1).png"></div>
         <div id="estacoesResultado">
         Se sua plantação ocorrer no inverno de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é baixo e o tempo é bem seco.<br>
@@ -395,8 +395,8 @@ img{
 
         var primavera = litr * 0.24;
         var umIrrigacaoPrimavera = primavera * 2;
-        var mesirrigacaoPrimavera = primavera * qtdIrrig;
-        // A primavera equivale a 70% de chuva(água) da irrigação necessária para a plantação.
+        var mesirrigacaoPrimavera = umIrrigacaoPrimavera * qtdIrrig;
+        // A primavera equivale a 24% de chuva(água) da irrigação necessária para a plantação.
         AgroCane.innerHTML += `<div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/primavera.png"></div>
         <div id="estacoesResultado">
         Se sua plantação ocorrer no primavera de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é médio<br>
