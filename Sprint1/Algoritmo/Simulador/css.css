@@ -134,7 +134,7 @@ img{
 
 #bodyBege{
     width: 1518px; 
-    height: 1800px; 
+    height: 3200px; 
     background-color:#ede9a3; 
     margin: 0px;
 }
@@ -392,8 +392,32 @@ img{
     margin-left: 575px;
     margin-top: 50px;
 }
+/*------------------------------------------------------------------------------------------*/
 
+#estacoesResultado{
+    color: black;
+    font-family: Amaranth;
+    font-size: 17px;
+    text-align: center;
+    margin-left: 50px;
+}
 
+#bolinhaVerdeEstacao{
+    width: 150px;
+    height: 150px;
+    background-color: #55a44e;
+    border-radius: 100px;
+    margin-top: 150px;
+    margin-left: 700px;
+    margin-bottom: 20px;
+}
+
+#iconesEstacoes{
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+    margin-left: 25px;
+}
 
 
 /*-----------------rodapé-------------------------------------------------------------*/
