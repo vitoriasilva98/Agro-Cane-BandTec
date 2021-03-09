@@ -25,9 +25,9 @@
 
     <br>
     <b>Escolha a região de plantio:</b>
-    <button onclick="centro_oestebt()" style="border-radius: 10px; background-color: #55a44e;">Centro-Oeste</button>
-    <button onclick="nordestebt()" style="border-radius: 10px;background-color: #55a44e;">Nordeste</button>
-    <button onclick="sudestebt()" style="border-radius: 10px;background-color: #55a44e;">Sudeste</button>
+    <button onclick="centro_oestebt()" class="botoes" style="border-radius: 10px; background-color: #55a44e;">Centro-Oeste</button>
+    <button onclick="nordestebt()" class="botoes" style="border-radius: 10px;background-color: #55a44e;">Nordeste</button>
+    <button onclick="sudestebt()" class="botoes"style="border-radius: 10px;background-color: #55a44e;">Sudeste</button>
     <div id="textco"></div>
     <div id="textnd"></div>
     <div id="textsd"></div>
@@ -39,21 +39,21 @@
 
     function centro_oestebt() {
         var qntton = Number(hec.value * 75);
-        var cons = Number(hec.value) * 18;
-        var custo = (cons * 4.583).toFixed(2);
-        var consecon = Number((hec.value) * 14.4).toFixed(2);
-        var custodesc = (consecon * 4.583).toFixed(2);
-        var dife = (custo - custodesc).toFixed(2);
+        var cons = Number(hec.value) * 18000000;
+        var custo = (cons * 4.583);
+        var consecon = Number((hec.value) * 14400000);
+        var custodesc = (consecon * 4.583);
+        var dife = (custo - custodesc);
         var pvermelho = (custodesc / custo) * 100;
         var pverde = 100 - pvermelho
 
         textco.innerHTML +=
             `<br><b>Centro-Oeste:</b><br><br>
     Você com <b>${hec.value} hectares</b>  terá uma produção bruta de <b>${qntton} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${cons} Gl</b>  de água e custo de <b> R$${custo}</b><br><br>
+Teria consumo de <b> ${cons} M<sup>3</sup></b>  de água e custo de <b> R$${custo.toFixed(2)}</b><br><br>
 Com economia de <b>20%</b> da aplicação você teria:<br><br>
-Consumo de <b>${consecon} Gl</b> de água e custo de <b> R$${custodesc}</b><br><br>
-Você terá uma economia de <b>R$${dife}</b><br><br>
+Consumo de <b>${consecon.toFixed(2)} M<sup>3</sup></b> de água e custo de <b> R$${custodesc.toFixed(2)}</b><br><br>
+Você terá uma economia de <b>R$${dife.toFixed(2)}</b><br><br>
 
  `
         textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
@@ -65,21 +65,21 @@ Você terá uma economia de <b>R$${dife}</b><br><br>
     function nordestebt() {
         var hectare = Number(hec.value);
         var qntton = (hectare * 75);
-        var cons = Number((hec.value) * 23).toFixed(2);
-        var custo = (cons * 4.583).toFixed(2);
-        var consecon = Number((hec.value) * 18.4).toFixed(2);
-        var custodesc = (consecon * 4.583).toFixed(2);
-        var dife = (custo - custodesc).toFixed(2);
+        var cons = Number((hec.value) * 23000000);
+        var custo = (cons * 4.583);
+        var consecon = Number((hec.value) * 18400000);
+        var custodesc = (consecon * 4.583);
+        var dife = (custo - custodesc);
         var pvermelho = (custodesc / custo) * 100;
         var pverde = 100 - pvermelho
 
         textco.innerHTML +=
             `<br><b>Nordeste:</b><br><br>
     Você com <b>${hectare} hectares</b> terá uma produção bruta de <b> ${qntton} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${cons} Gl</b> de água e custo de <b>R$${custo}</b>  <br><br>
+Teria consumo de <b> ${cons.toFixed(2)} M<sup>3</sup></b> de água e custo de <b>R$${custo.toFixed(2)}</b>  <br><br>
 Com economia de <b>20%</b>  da aplicação você teria:<br><br>
-Consumo de <b>${consecon} Gl</b> de água e custo de <b> R$${custodesc}</b><br><br>
-Você terá uma economia de <b>R$${dife}</b><br><br>`
+Consumo de <b>${consecon.toFixed(2)} M<sup>3</sup></b> de água e custo de <b> R$${custodesc.toFixed(2)}</b><br><br>
+Você terá uma economia de <b>R$${dife.toFixed(2)}</b><br><br>`
         textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
                   <div style="width: ${pverde}%;height:100px;background-color: red;"></div></div>`
         textco.innerHTML += `${pvermelho}%`
@@ -91,21 +91,21 @@ Você terá uma economia de <b>R$${dife}</b><br><br>`
     function sudestebt() {
         var hectare = Number(hec.value);
         var qntton = (hectare * 75);
-        var cons = Number(hec.value) * 16;
-        var custo = (cons * 4.583).toFixed(2);
-        var consecon = (Number(hec.value) * 12.8);
-        var custodesc = (consecon * 4.583).toFixed(2);
-        var dife = (custo - custodesc).toFixed(2);
+        var cons = Number(hec.value) * 16000000;
+        var custo = (cons * 4.583);
+        var consecon = (Number(hec.value) * 12800000);
+        var custodesc = (consecon * 4.583);
+        var dife = (custo - custodesc);
         var pvermelho = (custodesc / custo) * 100;
         var pverde = 100 - pvermelho
 
         textco.innerHTML +=
             `<br><b>Sudeste:</b><br><br>
     Você com <b>${hectare} hectares</b> terá uma produção bruta de <b> ${qntton} toneladas</b> de Cana.<br><br>
-Teria consumo de <b> ${cons} Gl</b> de água e custo de <b> R$${custo}</b>  <br><br>
+Teria consumo de <b> ${cons} M<sup>3</sup></b> de água e custo de <b> R$${custo.toFixed(2)}</b>  <br><br>
 Com economia de <b>20%</b> da aplicação você teria:<br><br>
-Consumo de <b> ${consecon} Gl</b> de água e custo de <b> R$${custodesc}</b><br><br>
-Você terá uma economia de <b>R$${dife}</b><br><br>`
+Consumo de <b> ${consecon} M<sup>3</sup></b> de água e custo de <b> R$${custodesc.toFixed(2)}</b><br><br>
+Você terá uma economia de <b>R$${dife.toFixed(2)}</b><br><br>`
         textco.innerHTML += `<div><div style="width: ${pvermelho}%;height:100px;background-color: green;float: right;"></div>
                   <div style="width: ${pverde}%;height:100px;background-color: red;"></div></div>`
         textco.innerHTML += `${pvermelho}%`
@@ -152,3 +152,4 @@ Teria consumo de (5m3*X) de agua e custo de R$(5m3*R$4,583)
 Com economia de 20% da aplicação você teria:
 Consumo de (4m3*X) de agua e custo de R$(4m3*R$4,583)
 -->
+
