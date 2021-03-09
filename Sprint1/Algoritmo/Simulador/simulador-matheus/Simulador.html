@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financeiro Agro Cane</title>
+    <link rel="shortcut icon" href="agro_logo.jpeg">
+</head>
+
+<body style="text-align: center;background-color: #ede9a3;">
+    <header>
+        <div style="background-color: #55a44e; height: 152px;">
+            <img style="height: 152px;margin-right: 0%;margin-top:auto" src="https://blog.esimplesauditoria.com.br/wp-content/uploads/2017/09/Calculo-do-Simples-Nacional.gif" alt="Logo Agro Cane">
+        </div>
+
+    </header>
+    <h2>Nesta página iremos simular o consumo de água, produção bruta de Cana-de-Açúcar e economia com e
+        sem aplicação:</h2>
+        
+    <b>Insira o valor de Área em Hectares:</b>
+    <input id="hec" type="text" placeholder="Área em: Hectares"><br>
+
+    <b>Insira o valor pago por m<sup>3</sup> em R$:</b>
+    <input id="valor" type="text" placeholder="Valor pago em R$"><br>
+
+    <br>
+    <b>Escolha a região de plantio:</b>
+    <button onclick="norte_bt()" style="background-color: #55a44e;">Norte</button>
+    <button onclick="nordeste_bt()" style="background-color: #55a44e;">Nordeste</button>
+    <button onclick="centro_oeste_bt()" style="background-color: #55a44e;">Centro-Oeste</button>
+    <button onclick="sudeste_bt()" style="background-color: #55a44e;">Sudeste</button>
+    <button onclick="sudeste_bt()" style="background-color: #55a44e;">Sul</button>
+
+    <div id="texto_norte"></div>
+    <div id="texto_nordeste"></div>
+    <div id="texto_centro_oeste"></div>
+    <div id="texto_sudeste"></div>
+    <div id="texto_sul"></div>
+
+</body>
+
+</html>
+
+<script>
+
+    function norte_bt() {
+        var hectare = Number(hec.value);
+        var qnt_toneladas_hec = hectare * 75;
+        var consumo_norte = Number(hec.value) * 25000;
+        var custo_norte = (consumo_norte * valor.value);
+        var consumo_economia_norte = Number(hec.value) * 20000;
+        var custo_economia_norte = (consumo_economia_norte * valor.value);
+        
+        texto_norte.innerHTML = 
+        `<br><b>Norte:</b><br><br>
+    Você com <b>${hectare} hectares</b>  terá uma produção bruta de <b>${qnt_toneladas_hec} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${consumo_norte} m<sup>3</sup></b> de água e custo de <b>R$${custo_norte}</b><br><br>
+Com economia de <b>20%</b> da aplicação você teria:<br><br>
+Consumo de <b>${consumo_economia_norte} m<sup>3</sup></b> de água e custo de <b>R$${custo_economia_norte}</b><br><br>
+`
+    }
+
+    function nordeste_bt() {
+        var hectare = Number(hec.value);
+        var qnt_toneladas_hec = hectare * 75;
+        var consumo_nordeste = Number(hec.value) * 23000;
+        var custo_nordeste = (consumo_nordeste * valor.value);
+        var consumo_economia_nordeste = Number(hec.value) * 18400;
+        var custo_economia_nordeste = (consumo_economia_nordeste * valor.value);
+        
+        texto_nordeste.innerHTML = 
+        `<br><b>Nordeste:</b><br><br>
+    Você com <b>${hectare} hectares</b>  terá uma produção bruta de <b>${qnt_toneladas_hec} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${consumo_nordeste} m<sup>3</sup></b> de água e custo de <b>R$${custo_nordeste}</b><br><br>
+Com economia de <b>20%</b> da aplicação você teria:<br><br>
+Consumo de <b>${consumo_economia_nordeste} m<sup>3</sup></b> de água e custo de <b>R$${custo_economia_nordeste}</b><br><br>
+`
+    }
+
+    function centro_oeste_bt() {
+        var hectare = Number(hec.value);
+        var qnt_toneladas_hec = hectare * 75;
+        var consumo_centro_oeste = Number(hec.value) * 20000;
+        var custo_centro_oeste = (consumo_centro_oeste * valor.value);
+        var consumo_economia_centro_oeste = Number(hec.value) * 16000;
+        var custo_economia_centro_oeste = (consumo_economia_centro_oeste * valor.value);
+        
+        texto_centro_oeste.innerHTML = 
+        `<br><b>Centro-Oeste:</b><br><br>
+    Você com <b>${hectare} hectares</b>  terá uma produção bruta de <b>${qnt_toneladas_hec} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${consumo_centro_oeste} m<sup>3</sup></b> de água e custo de <b>R$${custo_centro_oeste}</b><br><br>
+Com economia de <b>20%</b> da aplicação você teria:<br><br>
+Consumo de <b>${consumo_economia_centro_oeste} m<sup>3</sup></b> de água e custo de <b>R$${custo_economia_centro_oeste}</b><br><br>
+`
+    }
+
+    function sudeste_bt() {
+        var hectare = Number(hec.value);
+        var qnt_toneladas_hec = hectare * 75;
+        var consumo_sudeste = Number(hec.value) * 17000;
+        var custo_sudeste = (consumo_sudeste * valor.value);
+        var consumo_economia_sudeste = Number(hec.value) * 13600;
+        var custo_economia_sudeste = (consumo_economia_sudeste * valor.value);
+        
+        texto_sudeste.innerHTML = 
+        `<br><b>Sudeste:</b><br><br>
+    Você com <b>${hectare} hectares</b>  terá uma produção bruta de <b>${qnt_toneladas_hec} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${consumo_sudeste} m<sup>3</sup></b> de água e custo de <b>R$${custo_sudeste}</b><br><br>
+Com economia de <b>20%</b> da aplicação você teria:<br><br>
+Consumo de <b>${consumo_economia_sudeste} m<sup>3</sup></b> de água e custo de <b>R$${custo_economia_sudeste}</b><br><br>
+`
+    }
+
+    function sul_bt() {
+        var hectare = Number(hec.value);
+        var qnt_toneladas_hec = hectare * 75;
+        var consumo_sul = Number(hec.value) * 15000;
+        var custo_sul = (consumo_sul * valor.value);
+        var consumo_economia_sul = Number(hec.value) * 12000;
+        var custo_economia_sul = (consumo_economia_sul * valor.value);
+        
+        texto_sul.innerHTML = 
+        `<br><b>Sul:</b><br><br>
+    Você com <b>${hectare} hectares</b>  terá uma produção bruta de <b>${qnt_toneladas_hec} toneladas</b> de Cana.<br><br>
+Teria consumo de <b> ${consumo_sul} m<sup>3</sup></b> de água e custo de <b>R$${custo_sul}</b><br><br>
+Com economia de <b>20%</b> da aplicação você teria:<br><br>
+Consumo de <b>${consumo_economia_sul} m<sup>3</sup></b> de água e custo de <b>R$${custo_economia_sul}</b><br><br>
+`
+    }
+
+</script>
+
+<!--
+Pior dos casos
+1ha = 75 toneladas = 2500mm agua
+
+Melhor dos casos
+1ha = 75 toneladas = 1500mm agua
+
+Economia 20%
+
+Norte =  
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (Y*X) de agua e custo de R$(Y*Z) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (Y*X) de agua e custo de R$(Y*Z)  
+
+Nordeste =  
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (Y*X) de agua e custo de R$(Y*Z) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (Y*X) de agua e custo de R$(Y*Z) 
+
+Centro-Oeste = 
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (Y*X) de agua e custo de R$(Y*Z) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (Y*X) de agua e custo de R$(Y*Z) 
+
+Sudeste = 
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (Y*X) de agua e custo de R$(Y*Z) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (Y*X) de agua e custo de R$(Y*Z)
+
+Sul = 
+Você com X hectares terá uma produção bruta de (X*75) toneladas de Cana.
+Teria consumo de (Y*X) de agua e custo de R$(Y*Z) 
+
+Com economia de 20% da aplicação você teria:
+Consumo de (Y*X) de agua e custo de R$(Y*Z)
+-->
+© 2021 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
