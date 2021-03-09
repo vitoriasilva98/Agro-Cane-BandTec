@@ -1,0 +1,35 @@
+-- Criação do banco de dados agroCane
+create database agroCane
+
+-- Utilizar banco de dados
+use agroCane
+
+-- Criação da tabela infosCana
+create table infosCana(
+idInfosCana int primary key auto_increment,
+regiao varchar(15),
+estado char (2),
+cidade varchar (25),
+temperaturaMin varchar (4),
+temperaturaMax varchar (4),
+chuva_mm varchar (10),
+precoTonelada varchar (30),
+anoReferencia char (4));  
+
+-- Inserindo dados
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values (null, 'Sudeste', 'SP', 'Morro Agudo', '17ºC', '29ºC', '250 mm' ,'R$ 68','2017');
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values (null, 'Centro-Oeste', 'MS', 'Rio Brilhante', '20ºC', '33º', '210 mm', 'R$ 70', '2017');
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values (null, 'Sudeste', 'MG', 'Uberaba', '18ºC', '30ºC', '193 mm', 'R$ 74', '2017');
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values (null, 'Centro-Oeste', 'GO', 'Quirinópolis', '21ºC', '31ºC', '199 mm, 'R$74', '2017');
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+insert into infosCana (idInfosCana, regiao, estado, cidade, temperaturaMin, temperaturaMax, chuva_mm, precoTonelada, anoReferencia) values ();
+
+
+A média de água(chuva) é de ${verão} por m²
