@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Agro cane-Arduino</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+	<script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+	<style>
+		canvas {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+		}
+
+		#teste {
+			display: flex;
+			justify-content: center;
+			margin-top: 30vh;
+			background: white;
+			padding: 20px 10px;
+			border-radius: 5px;
+			width: 1500px;
+			background-color: rgb(182, 248, 182);
+
+		}
+	</style>
+
+	<link rel="shortcut icon"
+		href="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/logo.png">
+</head>
+
+<body style="background-color: rgb(166, 223, 166);">
+	<div style="float: left; width: 230px;">
+		<img width="200px" style="border-radius: 20px;"
+			src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/logo.png">
+	</div>
+	<div style="float: left;margin-top: 40px;">
+		<section>
+			<h2>Média: <label id='average'>0.00</label></h2>
+			<h2>Média Hora: <label id='averageHour'>0.00</label></h2>
+		</section>
+	</div>
+
+	<section style="width:50%">
+		<canvas id="chart"></canvas>
+		<section>
+			<script>
+
+				var context = document.getElementById("chart").getContext("2d");
+				context.canvas.width = 1000;
+				context.canvas.height = 300;
+
+				var configuration = {
+					type: 'bar',
+					data: {
+						datasets: [{
+							label: "Temperature x Time",
+							type: 'bar',
+							backgroundColor: [('#ede9a3'), ('#55a44e'), ('#ede9a3'), ('#55a44e'), ('#ede9a3'), ('#55a44e'), ('#ede9a3'), ('#55a44e'), ('#ede9a3'), ('#55a44e')],
+							borderColor: ['#55a44e'],
+						}]
+					},
+					options: {
+						scales: {
+							xAxes: [{
+								//type: 'value',
+								distribution: 'series',
+								ticks: {
+									beginAtZero: true,
+									maxticksLimit: 5
+								}
+							}],
+							yAxes: [{
+								scaleLabel: {
+									display: true,
+									labelString: 'Temperature'
+								},
+								ticks: {
+									beginAtZero: true,
+									suggestedMin: 0,
+									suggestedMax: 30
+								}
+							}]
+						},
+						animation: {
+							duration: 0
+						}
+					}
+				};
+
+				var chart = new Chart(context, configuration);
+
+				//Função para obter os dados de temperatura do server
+				//Seria mais interessante fazer isso com WebSocket, porém para fins academicos, os dados serão atualizados via HTTP
+
+				//Esse atributo dentro do contexto serve para saber qual foi o último índice processado, assim eliminado os outros elementos na
+				//hora de montar/atualizar o gráfico
+				this.lastIndexTemp = 0;
+				this.time = 0;
+
+				function get_data() {
+
+					var http = new XMLHttpRequest();
+					http.open('GET', 'http://localhost:3000/api', false);
+					http.send(null);
+
+					var obj = JSON.parse(http.responseText);
+					console.log(obj)
+					if (obj.data.length == 0) {
+						return;
+					}
+
+					var _lastIndexTemp = this.lastIndexTemp;
+					this.lastIndexTemp = obj.data.length;
+					listTemp = obj.data.slice(_lastIndexTemp);
+
+					listTemp.forEach(data => {
+						//Máximo de 60 itens exibidos no gráfico
+						if (chart.data.labels.length == 10 && chart.data.datasets[0].data.length == 10) {
+							chart.data.labels.shift();
+							chart.data.datasets[0].data.shift();
+						}
+
+						chart.data.labels.push(this.time++);
+						chart.data.datasets[0].data.push(parseFloat(data));
+						chart.update();
+					});
+
+					document.getElementById('average').textContent = obj.average;
+					document.getElementById('averageHour').textContent = obj.averageHour;
+				}
+
+				get_data();
+
+
+				function sendTemperature() {
+					var http = new XMLHttpRequest();
+					http.open('POST', 'http://localhost:3000/api/sendData', false);
+					http.send(null);
+				}
+
+				setInterval(() => {
+					sendTemperature();
+					get_data();
+				}, 1000);
+
+			</script>
+			</div>
+</body>
+
+</html>
