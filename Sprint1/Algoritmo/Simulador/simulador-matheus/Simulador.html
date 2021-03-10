@@ -31,7 +31,7 @@
     <button onclick="nordeste_bt()" style="background-color: #55a44e;">Nordeste</button>
     <button onclick="centro_oeste_bt()" style="background-color: #55a44e;">Centro-Oeste</button>
     <button onclick="sudeste_bt()" style="background-color: #55a44e;">Sudeste</button>
-    <button onclick="sudeste_bt()" style="background-color: #55a44e;">Sul</button>
+    <button onclick="sul_bt()" style="background-color: #55a44e;">Sul</button>
 
     <div id="texto_norte"></div>
     <div id="texto_nordeste"></div>
@@ -48,9 +48,9 @@
     function norte_bt() {
         var hectare = Number(hec.value);
         var qnt_toneladas_hec = hectare * 75;
-        var consumo_norte = Number(hec.value) * 25000;
+        var consumo_norte = Number(hec.value) * 23000;
         var custo_norte = (consumo_norte * valor.value);
-        var consumo_economia_norte = Number(hec.value) * 20000;
+        var consumo_economia_norte = Number(hec.value) * 18400;
         var custo_economia_norte = (consumo_economia_norte * valor.value);
         
         texto_norte.innerHTML = 
@@ -65,9 +65,9 @@ Consumo de <b>${consumo_economia_norte} m<sup>3</sup></b> de água e custo de <b
     function nordeste_bt() {
         var hectare = Number(hec.value);
         var qnt_toneladas_hec = hectare * 75;
-        var consumo_nordeste = Number(hec.value) * 23000;
+        var consumo_nordeste = Number(hec.value) * 25000;
         var custo_nordeste = (consumo_nordeste * valor.value);
-        var consumo_economia_nordeste = Number(hec.value) * 18400;
+        var consumo_economia_nordeste = Number(hec.value) * 20000;
         var custo_economia_nordeste = (consumo_economia_nordeste * valor.value);
         
         texto_nordeste.innerHTML = 
