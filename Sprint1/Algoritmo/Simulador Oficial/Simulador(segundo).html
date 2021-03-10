@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth&display=swap" rel="stylesheet">
+    <link rel="sortcut icon"
+        href="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/favicon.png"
+        type="image/png" />
+    <title>Simulador Agro Cane</title>
+
+</head>
+<style>
+
+#menu{
+    width: 1425px; height: 140px; background-color: #55a44e; margin: 0px;
+}
+
+img{
+    width: 150px;height: 150px; margin-left: 100px; float: left; margin-right: 400px;
+}
+
+#bege{
+    width: 540px; height: 60px; background-color: #ede9a3; float: left; border-radius: 50px; margin-top: 40px; margin-left: 120px;
+}
+
+#tituloVerde{
+    font-family: Amaranth; font-size: 18px; color: #55a44e; float: left; margin-left: 25px; margin-top: 20px; font-weight: bolder;
+}
+
+#botaoVerde{
+    width: 120px; height: 40px; background-color:#55a44e; float: left; border-radius: 50px; margin-top: 10px; margin-left: 15px;
+}
+
+#cadastro{
+    font-family: Amaranth; color: #ede9a3; margin-top: 10px; margin-left: 22px; font-size: 18px; font-weight: bolder;
+}
+
+#bodyBege{
+    width: 1425px; height: 600px; background-color:#ede9a3; margin: 0px;
+}
+
+#simulador{
+    font-family: Amaranth; color: #55a44e; font-size: 20px; font-weight: bolder; padding-top: 50px; padding-left: 680px;
+}
+
+#bolinhaVerde{
+    width: 150px; height: 150px; background-color: #55a44e; border-radius: 100px; margin-top: 40px; margin-left: 653px;
+}
+
+#esquerda{
+    float: left; width:759; height: 100px;
+}
+
+#direita{
+    float: right; width:759; height: 100px;
+}
+
+#menu{
+    width: 1518px; height: 140px; background-color: #55a44e; margin: 0px;
+}
+
+img{
+    width: 150px; height: 150px; margin-left: 100px; float: left; margin-right: 400px;
+}
+
+#bege{
+    width: 540px; height: 60px; background-color: #ede9a3; float: left; border-radius: 50px; margin-top: 40px;
+}
+
+#tituloVerde{
+    font-family: Amaranth; font-size: 18px; color: #55a44e; float: left; margin-left: 25px; margin-top: 20px; font-weight: bolder;
+}
+
+#botaoVerde{
+    width: 120px; height: 40px; background-color:#55a44e; float: left; border-radius: 50px; margin-top: 10px; margin-left: 15px;
+}
+
+#cadastro{
+    font-family: Amaranth; color: #ede9a3; margin-top: 10px; margin-left: 22px; font-size: 18px; font-weight: bolder;
+}
+
+#bodyBege{
+    width: 1518px; height: 1000px; background-color:#ede9a3; margin: 0px;
+}
+
+#simulador{
+    font-family: Amaranth; color: #55a44e; font-size: 20px; font-weight: bolder; text-align: left;
+}
+
+#rodapeVerde{
+    width: 1425px; height: 25px; background-color:#55a44e; margin: 0px; margin-bottom: 0px; color:#ede9a3; font-size: 14px; text-align: center; font-family: Amaranth;
+}
+
+#iconeCalculadora{
+    width: 100px; height: 100px; margin-top: 25px; margin-left: 25px;
+}
+/*--------Simualdor-----------------------------------------------------------------------------*/
+#name{
+    color:#55a44e; font-size: 17px; text-align: left; font-family: Amaranth; margin-top: 20px; font-weight: bolder; margin-left: 250px;
+}
+
+#pergunta{
+    color:black; font-size: 20px; text-align: left; font-family: Amaranth; margin-top: 10px; margin-left: 250px;
+}
+
+#nome{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  
+}
+
+#estado{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  margin-bottom: 10px;
+}
+
+#hectare{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  font-weight: bolder; 
+}
+
+#legenda{
+    background-color: #55a44e; color: #55a44e; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 250px; height: 320px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: left;  font-weight: bolder; margin-left: 250px; margin-top: 50px; 
+}
+
+#legendaBege{
+    background-color: #ede9a3; color: #55a44e; font-family: Amaranth; border-radius: 50px; font-size: 14px; width: 240px; height: 310px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  font-weight: bolder; margin-left: 5px; margin-top: 10px; position:relative; top:5px
+}
+
+#ano{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 20px; font-size: 17px; width: 220px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center;  font-weight: bolder; padding-top: 10px; position:relative; top:15px; margin-left: 10px; margin-bottom: 20px;
+}
+
+p{
+    font-family: Amaranth; color:black;  
+}
+
+#simular{
+    background-color: #55a44e; color: #ede9a3; font-family: Amaranth; border-radius: 50px; font-size: 17px; width: 90px; height: 30px; border-color: #55a44e; border-top: #55a44e; border-left: #55a44e; text-align: center; margin-top: 30px; margin-left: 415px; 
+}
+/*--------conexao---------------------------------------------------------------------------*/
+#conexao{
+    margin-top: 100px; font-family: Amaranth; font-size: 17px; text-align: left; margin-left: 50px;
+}
+
+#botaoestacoes{
+    margin-left: 575px; margin-top: 50px;
+}
+/*--------Resultado das estações----------------------------------------------------------------------------------*/
+
+#estacoesResultado{
+    color: black; font-family: Amaranth; font-size: 17px; text-align: left; float: right; margin-bottom: 30px; 
+}
+
+#bolinhaVerdeEstacao{
+    width: 80px; height: 80px; background-color: #55a44e; border-radius: 100px; margin-bottom: 40px; float: left;
+}
+
+#iconesEstacoes{
+    width: 50px; height: 50px; margin-top: 15px; margin-left: 16px;
+}
+
+/*-----------------rodapé-------------------------------------------------------------*/
+#rodapeVerde{
+    width: 1518px; height: 25px; background-color:#55a44e; margin: 0px; margin-bottom: 0px; color:#ede9a3; font-size: 14px; text-align: center; font-family: Amaranth;
+}
+
+</style>
+
+<body style="margin-top: 0px; margin-left: 0px;">
+    <div id="menu">
+        <img
+            src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/logo_transparent.png">
+        <div id="bege">
+            <div id="tituloVerde">Home</div>
+            <div id="tituloVerde">Quem Somos</div>
+            <div id="tituloVerde">Serviços</div>
+            <div id="tituloVerde">Simulador</div>
+            <div id="botaoVerde">
+                <div id="cadastro">Cadastrar</div>
+            </div>
+        </div>
+    </div>
+    <div id="bodyBege">
+        <div id="simulador">Simulador</div>
+        <div id="bolinhaVerde">
+            <img id="iconeCalculadora"
+                src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/calculadora.png">
+        </div>
+        <div id="esquerda">
+            <div id="name">
+                Nome<br>
+                <input id="nome" type="text" placeholder="nome">
+            </div>
+
+            <div id="pergunta">Onde fica sua plantação?</div>
+
+            <div id="name">
+                Estado <div id="estado">São Paulo</div>
+            </div>
+
+            <div id="pergunta">Qual é o tamanho da sua plantação?</div>
+
+            <div id="name">
+                Hectare<br>
+                <input id="hectare" type="text" placeholder="hectare">
+            </div>
+
+            <button onclick="Simular()" id="simular">Simular</button>
+            <br>
+            <div id="legenda">
+                <div id="legendaBege">
+                    <div id="ano">
+                        Média de chuva (2020)
+                    </div>
+                    Verão
+                    <p>Em 3 meses ------------- 250L/m²</p>
+                    Outono
+                    <p>Em 3 meses ------------- 124L/m²</p>
+                    Inverno
+                    <p>Em 3 meses ------------- 44L/m²</p>
+                    Primavera
+                    <p>Em 3 meses ------------- 116L/m²</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="direita">
+            <div id="conexao" style="margin-top: 50px;"></div>
+        </div>
+
+
+
+    </div>
+    <div id="rodapeVerde">
+        © 2021 by Agro Cane. Todos os direitos reservados.
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    function Simular() {
+
+        //Declaração de variáveis
+        const nomeUsuario = nome.value;
+        var hect = hectare.value;
+        var hectar = hectare.value * 10000;
+
+        //medidas de água
+        var litr = hectar * 0.015;
+
+        //Quantidade de água necessária por m² vezes a área
+        var qtdAguaPlantio = litr / hectar; //mudar deppois
+
+
+        //gasto de água
+        var tresMeses = 3;
+        var gastoTotalAgua = litr * 0.5;
+        var calculoTodaPlantacao = litr * 10000;
+        var porMes = calculoTodaPlantacao * 0.5;
+        var valorTresMeses = porMes * 3;
+
+        //Verão-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //medidas de água
+
+        //gasto de água
+        var gastoAgua = litr * 0.5;
+        var gastoTotalAgua =  gastoAgua;
+
+        var verao = Math.trunc(250.93);
+        var economiaVerao =  (litr * 3) - verao;
+        var semAgroCane = litr * 3;
+        // O verão equivale a 45% de chuva(água) da irrigação necessária para a plantação.
+
+        //Outono-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //Outono
+        var outono = Math.trunc(124.9);
+        var economiaOutono = (litr * 3) - outono;
+        // O outono equivale a 18% de chuva(água) da irrigação necessária para a plantação.
+
+        //Inverno-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //Inverno
+        var inverno = Math.trunc(44.7);
+        var economiaInverno = (litr * 3) - inverno;
+        // O inverno equivale a 12% de chuva(água) da irrigação necessária para a plantação.
+
+        //Primavera-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+        //Primavera
+        var primavera = Math.trunc(116,1333);
+        var economiaPrimavera = (litr * 3) - primavera;
+        // A primavera equivale a 24% de chuva(água) da irrigação necessária para a plantação.
+
+        conexao.innerHTML  = `<div id="resumoInicial">Olá <b>${nomeUsuario}</b>! Sua plantação é no estado de <b>São Paulo.</b> O tamanho da sua plantação é de<br> 
+        <b style="color: green;">${hect}</b> hectare(s) e a quantidade de água necessária para irrigar toda<br>
+        a plantação por mês é de <b style="color: green;">${Math.trunc(litr)}</b> litros por m².<br><br><br>
+        
+
+
+        <div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/verao.png"></div>
+        <div id="estacoesResultado">
+        Se sua plantação ocorrer no verão de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é bem alta.<br>
+        Durante os meses do verão, seu gasto total com água será de <b style="color: red;">${semAgroCane} litros</b> por m².<br>
+        Aplicando o nosso sistema, <b>Agro Cane</b>, você economizará <b style="color: green;">${verao} litros</b> por m².<br>
+        *Lembrando que esses números estão baseados nas médias de chuvas do verão de 2020 no Estado de SP.</div> <br + br + br>
+
+        <div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://github.com/vitoriasilva98/Agro-Cane-BandTec/blob/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/outono.png?raw=true"></div>
+        <div id="estacoesResultado">
+        Se sua plantação ocorrer no outono de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é médio e o tempo é seco.<br>
+        Durante os meses do outono, seu gasto total com água será de <b style="color: red;">${semAgroCane} litros</b> por m².<br>
+        Aplicando o nosso sistema, <b>Agro Cane</b>, você economizará <b style="color: green;">${outono} litros</b> por m².<br>
+        *Lembrando que esses números estão baseados nas médias de chuvas no outono de 2020 no Estado de SP.</div> <br + br + br>
+
+        <div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/inverno%20(1).png"></div>
+        <div id="estacoesResultado">
+        Se sua plantação ocorrer no inverno de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é baixo e o tempo é bem seco.<br>
+        Durante os meses do inverno, seu gasto total com água será de <b style="color: red;">${semAgroCane} litros</b> por m².<br>
+        Aplicando o nosso sistema, <b>Agro Cane</b>, você economizará <b style="color: green;">${inverno} litros</b> por m².<br>
+        *Lembrando que esses números estão baseados nas médias de chuvas no inverno de 2020 no Estado de SP.</div> <br + br + br>
+
+        <div id="bolinhaVerdeEstacao"><img id="iconesEstacoes" src="https://raw.githubusercontent.com/vitoriasilva98/Agro-Cane-BandTec/main/Sprint1/Algoritmo/Simulador/Vitoria-da-Silva/primavera.png"></div>
+        <div id="estacoesResultado">
+        Se sua plantação ocorrer no primavera de acordo com os nossos<br> sensores essa é uma estação em que o nível de chuva é médio<br>
+        Durante os meses do primavera, seu gasto total com água será de <b style="color: red;">${semAgroCane} litros</b> por m².<br>
+        Aplicando o nosso sistema, <b>Agro Cane</b>, você economizará <b style="color: green;">${primavera} litros</b> por m².<br>
+        *Lembrando que esses números estão baseados nas médias de chuvas na primavera de 2020 no Estado de SP.</div> <br + br + br>`;
+
+    }
+
+</script>
